@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<title>Login</title>
+<link rel="stylesheet" href="StylesLogin.css">
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+    <source src="163057-826724397.mp4" type="video/mp4">
+</video>
+<div class="nav-button">
+  <button class="btnn white-btn" id="loginBtn" onclick="login()">Log in</button>
+  <button class="btnn" id="registerBtn" onclick="register()">Register</button>
+</div>
+<div class="login-box" id="login">
+  <h1>Login</h1>
+  <form action="/auth" method="post">
+    <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" name="username" placeholder="Username" required>
+    </div>
+    <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" placeholder="Password" required>
+    </div>
+    <input type="submit" class="btn" value="Login">
+  </form>
+</div>
+<div class="register-box" id="register">
+  <h1>Sign up</h1>
+  <form action="/register" method="post">
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" name="username" placeholder="Username" required>
+        </div>
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <input type="submit" class="btn" value="Register">
+    </form>
+</div>
+<script>
+  var a = document.getElementById("loginBtn");
+  var b = document.getElementById("registerBtn");
+  var x = document.getElementById("login");
+  var y = document.getElementById("register");
+  function login() {
+      x.style.transform = "translateY(0%)";
+      y.style.transform = "translateY(200%)";
+      a.className += " white-btn";
+      b.className = "btnn";
+  }
+  function register() {
+      x.style.transform = "translateY(200%)";
+      y.style.transform = "translateY(0%)";
+      a.className = "btnn";
+      b.className += " white-btn";
+  }
+
+  // Prevent vertical scrolling
+  document.addEventListener('wheel', function(e) {
+      e.preventDefault();
+  }, { passive: false });
+
+  document.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+  }, { passive: false });
+</script>
+</body>
+</html>

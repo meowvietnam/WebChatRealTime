@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="StylesTrangChu.css">
+</head>
+<body>
+  
+  <div class="container">
+    <div class="leftSide">
+      <div class="header">
+        <div class="userimg">
+          <img id="userImg" src="" alt="" class="cover">
+        </div><p class="name" id="userName">Nguyễn Tuyến</p>
+        <ul class="nav_icons">
+          <li style="font-size: large;"></li>
+          <li><ion-icon name="scan-circle-outline"></ion-icon></li>
+          <li><ion-icon name="chatbox"></ion-icon></li>
+          <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+        </ul>
+      </div>
+      <div class="search_chat">
+        <div>
+          <input type="text" id="searchFriendInput" placeholder="Search or start new chat">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+      </div> 
+      <!--danh sach chat-->
+      <div class="chatlist" id="friendList"></div>
+    </div>
+    <div class="rightSide">
+      <div class="header">
+        <div class="imgText">
+          <div class="userimg">
+            <img id="imgFriendActive" src="Facebook-Avatar_3.png" alt="" class="cover">
+          </div>
+          <h4 id="nameFriendActive"></h4>
+        </div>
+        <ul class="nav_icons">
+          <li><ion-icon name="search-outline"></ion-icon></li>
+          <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+        </ul>
+      </div>
+      <!--CHAT BOX-->
+      <div class="chatbox" id="chatBox"></div>
+      <div class="chat_input" id="chatForm">
+        <ion-icon name="happy-outline"></ion-icon>
+        <input type="text" id="messageInput" placeholder="Type a message" required>
+        <ion-icon name="send-outline" onclick="SendMessage(event)"></ion-icon>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="socket.io/socket.io.js" ></script>
+  <script src="ClientConnectSocket.js"></script>
+</body>
+</html>

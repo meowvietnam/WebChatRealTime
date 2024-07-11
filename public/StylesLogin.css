@@ -1,0 +1,167 @@
+body {
+  overflow: hidden;
+}
+.login-box,.register-box  , .form-box {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  color: #ae0505;
+  width: 300px;
+  transition: .2s ease-in-out;
+}
+.login-box {
+  transform: translateY(0%); /* Form đăng nhập ở vị trí ban đầu */
+}
+.register-box {
+  transform: translateY(200%); /* Form đăng ký ở vị trí dưới khi load trang */
+}
+h1 {
+  display: inline-block;
+  font-size: 50px;
+  border-bottom: 6px solid #d60563;
+  margin-bottom: 40px;
+  padding: 13px 0;
+  cursor: pointer;
+}
+.textbox {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #d60563;
+}
+.textbox i {
+  width: 26px;
+  display: inline-block;
+  text-align: center;
+}
+.textbox input {
+  border: none;
+  background: none;
+  color: #ffffff;
+  font-size: 16px;
+  width: 80%;
+  outline: none;
+}
+.btn {
+  width: 100%;
+  background: none;
+  border: 2px solid #d60563;
+  color: #ae0505;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn:hover {
+  background: #d60563;
+  color: #ffffff;
+}
+#myVideo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -10;
+}
+.nav-button .btnn {
+  width: 130px;
+  height: 40px;
+  font-weight: 500;
+  background: none;
+  border: 2px solid #d60563;
+  color: #ae0505;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.btnn.white-btn {
+  background: rgba(255, 255, 255, 0.481);
+}
+.btnn:hover {
+  background: #d60563b4;
+  color: #ffffff;
+}
+.form-box {
+  position: absolute;
+  left: 40%; /* Adjusted left position for registration form */
+  top: 20%; /* Adjusted top position for registration form */
+  transform: translateY(200%);
+  color: #ae0505;
+}
+.top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.top h1 {
+  font-size: 50px;
+  border-bottom: 6px solid #d60563;
+  padding: 13px 0;
+}
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+.input-field {
+  font-size: 16px; /* Adjusted font size for input fields */
+  background: none;
+  color: #ffffff;
+  width: 100%;
+  height: 45px;
+  padding: 0 10px 0 30px;
+  border: none;
+  border-bottom: 2px solid #d60563;
+  outline: none;
+  transition: .2s ease;
+}
+::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.submit {
+  font-size: 16px; /* Adjusted font size for submit button */
+  font-weight: 500;
+  color: #ae0505;
+  height: 40px;
+  width: 100%;
+  border: 2px solid #d60563;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+.submit:hover {
+  background: #d60563;
+  color: #ffffff;
+}
+.two-col {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: small;
+  margin-top: 10px;
+}
+.two-col .one {
+  display: flex;
+  color: #ae0505;
+}
+.two label a {
+  text-decoration: none;
+  color: #ae0505;
+}
+.two label a:hover {
+  text-decoration: underline;
+}
+.input-box i {
+  color: #ae0505;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  top: -35px;
+  left: 0px;
+}
